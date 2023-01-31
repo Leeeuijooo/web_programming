@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    f1(); //hoisting 만들기 전에 호출!
+    console.log(k); //k를 선언할 때 var를 붙였으므로 에러가 아님
+    console.log(y); //y를 선언할 때 let을 붙였으므로 에러
+    
+    function f1(){
+        console.log("Hoisting을 위한 함수");
+    }
+
+    var k = 10;
+    let y = 20;
+
+    f1();
+
+</script>    
+</body>
+</html>
