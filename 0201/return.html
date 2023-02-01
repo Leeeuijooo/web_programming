@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*let interAddWithInteger = (a,b) => {
+            return a+b;//3이 써진다고 생각하면됨
+        }
+
+        let result = interAddWithInteger(1,2)
+        console.log(result);
+
+        let k = interAddWithInteger(result,50);
+        console.log(k);*/
+
+        let ar = [1,2,3];
+        let nopurefunction = (xr) => {
+            xr[0] = 20;
+
+        }// 매개변수로 전달된 데이터를 변경하는 함수
+        // 이런 함수는 순수함수가 아님
+        console.log(ar);
+        nopurefunction(ar);
+        console.log(ar);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

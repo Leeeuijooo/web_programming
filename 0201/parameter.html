@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>//정수 1개를 받아서 func를 정수만큼 수행해주는 함수
+        let disp = (n) => {
+            for(let i=0; i<n; i=i+1){
+                console.log("func");
+            }
+        }
+
+        disp(4);
+        //로그인 만들기
+        let login = (email, password) => {
+
+            console.log(email);
+            console.log(password);
+
+            if(email === "root@kakao.com"){
+                if(password === "1234"){
+                    console.log("로그인 success");}
+                    else{
+                        console.log("잘못된 password");
+                    }
+
+            }else{
+                console.log("잘못된 이메일")
+            }
+
+        }
+        login("root@kakao.com", "1234");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

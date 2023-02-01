@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let tot = 0;
+        let idx = 1;
+        /*while(idx <=10){
+            tot = tot + idx;
+            idx = idx + 1;
+
+        }*/
+
+        /*do {
+            tot = tot + idx;
+            idx = idx + 1;
+        }while(idx<=10);
+        */
+
+        /*for(; idx<=10; idx = idx +1){
+            tot = tot + idx;
+        }
+        console.log("tot:" + tot);
+        */
+
+        /* 1 부터 100까지 에서 3의 배수이고 4의 배수인 수의 개수를 확인
+        */
+        /*let cnt = 0;
+        for(let idx=1; idx<=100; idx=idx+1){
+            if(idx % 3 === 0 && idx%4 ===0){
+                cnt = cnt + 1;
+            }
+        }
+        console.log("cnt = " + cnt);*/
+
+        let cnt = 0;
+        for(let idx=1; idx<=100; idx=idx+1){
+            if(idx % 4 === 0 && idx%3 ===0){
+                cnt = cnt + 1;
+            }
+        }
+        console.log("cnt = " + cnt);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

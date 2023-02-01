@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let click = () => {
+            console.log("클릭");
+        };
+
+        click(); //직접 함수를 호출
+        window.addEventListener("load",(e) => {
+            //이벤트에 연결 - bnt를 누르면 함수가 호출된다.
+            document.getElementById("bnt").addEventListener("click", click);
+        });
+    
+    </script>
+</head>
+<body>
+    <button id="bnt">버튼</button>
+    
+</body>
+</html>

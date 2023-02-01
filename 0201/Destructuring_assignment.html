@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let sm = ["SES", "소녀시대", "에스파", "레드벨벳"];
+
+        let one, two, three, four;
+        // 구조 분해 할당 - 배열의 요소를 순서대로 나누어서 대입
+        [one,two,three,four] = sm;
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        console.log(four);
+        // 변수의 개수가 부족하면 앞에서부터 순서대로 채움
+        [one,two,three] = sm;
+        console.log(three);
+        // 이 경우 five 는 undefined
+        [one,two,three,four,five] = sm;
+        console.log(five);
+
+
+        // 객체 구조 분해 할당 - 속성 단위로 구조 분해 할당을 수행
+        // 객체를 구조 분해 할당할 때는 속성의 이름 과 동일한 경우에만 할당됨.
+
+        let obj = {"name":"lee", "job":"student","live":["bor","seoul"]};
+
+        let adm = obj; // obj가 참조하는 데이터를 adm에 대입
+
+        // 객체를 구조 분해 할당 할 때는 변수를 만들면서 수행
+        // const를 사용하는 경우가 많다
+
+        const {job, name} = obj;
+        console.log(name);
+        console.log(job);
+
+        let aespa = ["카리나","지젤","윈터","닝닝"];
+        // 스프레드 연산 - leader에 하나의 데이터를 할당하고 나머지를 etc에 할당
+        let [leader, ...etc] = aespa;
+        console.log(etc);
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

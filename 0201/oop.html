@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+    <script>
+        /*//사용자 정의 객체
+        let obj = {"name":"lee","age":27,"disp":function(){
+            // this를 붙여야 자신의 객체 내에서 찾을 수 있다.
+            console.log(this.name);
+        }};
+        // 속성 호출
+        console.log(obj.name);
+        console.log(obj["age"]);
+        // 함수 호출
+        obj.disp();*/
+
+        // 함수 내에서 this 가 사용되므로 생성자 함수 아니면 객체의 함수로 사용되어야 함
+        /*function Person(name, phone){
+            this.name = name;
+            this.phone = phone;
+            this.display = function(){
+
+            }
+        }*/
+
+        /*let p1 = new Person("lee","3233");
+        let p2 = new Person("joo","4434");
+        console.log(p1.name)
+        console.log(p1.phone)
+        console.log(p2.name)
+        console.log(p2.phone)*/
+
+        class Person{
+            constructor(name,phone){
+                this.name = name;
+                this.phone = phone;
+
+            }
+            display(){
+
+                console.log(this.name + ":"+ this.phone);
+            
+            }
+        }
+        
+        let p1 = new Person("lee","3233");
+        p1.display();
+
+        //상속 하는 클래스를 만들고 싶다
+        // Person 클래스를 상속 받는 PersonEx 클래스
+        class PersonEx extends Person{
+            constructor(name,phone,age){
+                //상위 클래스의 생성자
+                super(name,phone);
+                this.age = age;
+
+            }
+            // Person에 존재하는 display를 새로 정의 - Overriding
+            display(){
+                super.display();
+                console.log(this.age);
+
+            }
+
+        }
+
+        let sub = new PersonEx("joo","4455","27");
+        sub.display();
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

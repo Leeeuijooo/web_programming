@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let outer = function(){
+            let local = 1;
+            // 중첩 함수 - 함수 안에 함수를 만드는 것은
+            let inner = function(){
+                console.log(local);
+                // 내부에서는 내부의 다른 변수의 값을 변경하는 것이 가능
+                local = local + 1;
+
+            }
+            // 함수도 하나의 자료형이기 때문에 리턴하는 것이 가능
+            // High Order Function(currying)
+            return inner;
+        }
+        // f 에 대입되는 것은 outer 함수가 리턴한 inner 함수
+        let f = outer();
+        f();// inner 함수가 호출됨
+        f();
+        f();
+        // 영역 내에서 만들어진 데이터는 영역 내에서만 사용이 가능한데
+        // 함수 내부에서 로컬 데이터를 조작하는 함수를 만들어서 리턴하면
+        // 함수 외부에서 함수 내부의 로컬 데이터를 조작할 수 있음 - closure
+
+        /*function interAddWithInteger(a,b) {
+            return a + b;
+        }*/
+
+       /*let interAddWithInteger = function(a,b){
+            return a + b;
+        }*/
+
+        /*let interAddWithInteger = (a,b) => {
+            return a + b;
+        }
+        console.log(interAddWithInteger(7,24));*/
+
+        //위의 함수를 아래처럼 간략하게 표현할 수 있음 return 이 하나 이기 때문에 return 생략가능
+        // {}안의 내용이 1줄인 경우 {}를 생략할 수 있음
+        let interAddWithInteger = (a,b) => a+b;
+        console.log(interAddWithInteger(7,24));
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
